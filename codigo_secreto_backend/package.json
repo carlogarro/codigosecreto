@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "deploy": "git push heroku master",
+    "deploy": "git push origin master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "build:ui": "rm -rf build && cd ../codigo_secreto_frontend && npm run build --prod && cp -r build ../codigo_secreto_backend/",
     "test": "echo \"Error: no test specified\" && exit 1"
