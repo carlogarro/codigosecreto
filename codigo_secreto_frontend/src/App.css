@@ -1,0 +1,84 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 40px;
+  background: #4c243b;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  justify-content: space-evenly;
+  /* padding: 10px; */
+  align-content: center;
+  /* grid-gap: 10px 20px; */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  /* grid-template-rows: repeat(5, 200px); */
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+}
+
+@media (min-width: 600px) {
+  .board {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.scene {
+  /* width: 250px; */
+  height: 100px;
+  perspective: 600px;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border: 1px solid #ccc;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: gray;
+}
+
+.card__face--back {
+  background: gray;
+  /* transform: rotateY(180deg); */
+}
+
+.card__face--back--blue {
+  background: #54457f;
+  transform: rotateY(180deg);
+}
+
+.card__face--back--red {
+  background: #b84a62;
+  transform: rotateY(180deg);
+}
+
+.header {
+  padding: 0px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}

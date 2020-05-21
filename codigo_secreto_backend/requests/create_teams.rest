@@ -1,0 +1,7 @@
+POST http://raspberrypi2:3001/api/teams
+Content-Type: application/json
+
+{
+    "playing": false,
+    "content": [0, 1, 1]
+}
