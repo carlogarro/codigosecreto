@@ -17,12 +17,8 @@ io.on('connection', (socket) => {
 
   socket.on('flippedCard', (id) => {
     socket.broadcast.emit('flippedCard', id)
-    // console.log('id:', id)
   })
-  // socket.on('flippedCard', (id) => {
-  //
-  //   console.log('id:', id)
-  // })
+
   socket.on('disconnect', () => {
     console.log('client disconnect...', socket.id)
   })
