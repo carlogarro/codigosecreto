@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const roomSchema = new mongoose.Schema({
   startingTeam: Boolean,
   cards: [{ word: String, team: Boolean, visible: Boolean }],
+  createdAt: { type: Date, default: Date.now, expires: '1d' },
 })
 
 roomSchema.set('toJSON', {
