@@ -21,7 +21,7 @@
     "mongoose": "^5.9.7",
     "mongoose-simple-random": "^0.4.1",
     "socket.io": "^2.3.0",
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
